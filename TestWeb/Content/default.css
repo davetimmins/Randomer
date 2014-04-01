@@ -1,0 +1,78 @@
+﻿.rotate {
+    -webkit-transform-origin: 50% 58%;
+    transform-origin: 50% 58%;
+    -ms-transform-origin: 50% 58%; /* IE 9 */
+    -webkit-animation: spin .7s infinite linear;
+    -moz-animation: spin .7s infinite linear;
+    -o-animation: spin .7s infinite linear;
+    animation: spin .7s infinite linear;
+}
+
+@-moz-keyframes spin {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+body {
+    margin: 20px;
+    color: #444;
+}
+
+[data-click] {
+    cursor: pointer;
+    padding: 0 10px;
+    font-size: 18px;
+}
+
+span[data-click] {
+    color: #999;
+}
+
+    span[data-click]:hover {
+        color: #333;
+    }
+
+#agologin .rotate {
+    visibility: hidden;
+    font-size: 18px;
+    margin: 0 0 0 10px;
+}
+
+#agologin .loading .rotate {
+    visibility: visible;
+}
+
+#service-detail .rotate {
+    visibility: hidden;
+    font-size: 18px;
+    margin: 0 0 0 10px;
+}
+
+#service-detail .loading .rotate {
+    visibility: visible;
+}
