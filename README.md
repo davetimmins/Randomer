@@ -13,6 +13,6 @@ The workflow here is
  - Enter the number of features to create (between 1 and 1000)
  - Only attribute fields that are required and are editable will be auto populated (with random data)
  
- Note that only point feature classes ar ecurrently supported.
+Note that only point feature classes are currently supported.
  
- This is a very basic example whose primary use is to quickly generate dummy data for testing purposes. Feel free to contribute if you are feeling that way inclined.
+This is a very basic example whose primary use is to quickly generate dummy data for testing purposes. Feel free to contribute if you are feeling that way inclined.
