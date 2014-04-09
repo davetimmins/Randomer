@@ -3,11 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWeb", "TestWeb\TestWeb.csproj", "{C66C909D-90DD-4FBE-A74B-F455DE7922F5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dependencies", "dependencies", "{1251567A-EEEC-49D8-AE49-E8CC05F2165D}"
-	ProjectSection(SolutionItems) = preProject
-		dependencies\ArcGIS.ServiceModel.dll = dependencies\ArcGIS.ServiceModel.dll
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
