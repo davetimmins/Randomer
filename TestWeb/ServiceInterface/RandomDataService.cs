@@ -41,7 +41,7 @@ namespace TestWeb.ServiceInterface
                 new ArcGISOnlineTokenProvider(request.Name, request.Password, _serializer));
 
              var token = await agoGateway.TokenProvider.CheckGenerateToken();
-             var searchResult = await agoGateway.DescribeSite(request.Name);
+             var searchResult = await agoGateway.DescribeSite();
 
             foreach (var result in searchResult.Results)
             {
