@@ -16,34 +16,12 @@ namespace TestWeb.ServiceInterface
             : base(serializer, tokenProvider)
         { }
 
-        public Task<SearchHostedFeatureServicesResponse> Search(SearchHostedFeatureServices searchRequest)
-        {
-            return Get<SearchHostedFeatureServicesResponse, SearchHostedFeatureServices>(searchRequest);
-        }
-
         public Task<HostedServiceDetail> ServiceDetail(String serviceUrl)
         {
             return Get<HostedServiceDetail>(serviceUrl);
         }
     }
-
-    public class ArcGISGateway : PortalGateway
-    {
-        public ArcGISGateway(String root, ISerializer serializer)
-            : base(root, serializer)
-        { }
-
-        public Task<ApplyEditsResponse> ApplyEdits<T>(ApplyEdits<T> edits) where T : IGeometry
-        {
-            return Post<ApplyEditsResponse, ApplyEdits<T>>(edits);
-        }
-
-        public Task<QueryForIdsResponse> QueryForIds(QueryForIds query)
-        {
-            return Get<QueryForIdsResponse, QueryForIds>(query);
-        }
-    }
-
+    
     public class ServiceStackSerializer : ISerializer
     {
         public ServiceStackSerializer()

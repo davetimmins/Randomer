@@ -1,4 +1,5 @@
-﻿using ServiceStack;
+﻿using ArcGIS.ServiceModel.Operation;
+using ServiceStack;
 using System;
 using System.Collections.Generic;
 using System.Linq;

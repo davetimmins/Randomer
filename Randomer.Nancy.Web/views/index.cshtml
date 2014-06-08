@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Random Data Generator for ArcGIS Online Hosted Feature Services</title>
-    <script type="text/javascript" src="Scripts/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-2.1.0.js"></script>
     <script type="text/javascript" src="Scripts/bootstrap.js"></script>
     <script type="text/javascript" src="/js/ss-utils.js"></script>
     <link href="Content/default.css" rel="stylesheet" />
@@ -53,7 +53,7 @@
         Currently using a free license for ServiceStack v4 so adding delete capability exceeds the 
             free quote for serialization.
          *@
-       @* <form id="form-delete-features" method="POST"
+        <form id="form-delete-features" method="POST"
                 action="@(new EditFeatures().ToPostUrl())" 
                 data-action-alt="@(new EditFeatures().ToOneWayUrl())">
             <div class="alert alert-success" style="display: none"></div>
@@ -64,7 +64,7 @@
                 <div class='glyphicon glyphicon-repeat rotate'></div>
             </div>
             <div class="clearfix"></div>
-        </form>*@
+        </form>
         <p>Can create features: <span data-html="canCreate"></span></p>
         <p>Geometry type: <span data-html="geometryType"></span></p>
         <p>The following required fields will be auto populated: <span data-html="fields"></span></p>

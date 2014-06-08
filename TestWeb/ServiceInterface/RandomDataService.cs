@@ -40,9 +40,8 @@ namespace TestWeb.ServiceInterface
             var agoGateway = new SearchArcGISOnlineGateway(_serializer,
                 new ArcGISOnlineTokenProvider(request.Name, request.Password, _serializer));
 
-            var token = await agoGateway.TokenProvider.CheckGenerateToken();
-            var searchRequest = new SearchHostedFeatureServices(new ArcGISOnlineEndpoint("/"), request.Name) { Token = token.Value };
-            var searchResult = await agoGateway.Search(searchRequest);
+             var token = await agoGateway.TokenProvider.CheckGenerateToken();
+             var searchResult = await agoGateway.DescribeSite(request.Name);
 
             foreach (var result in searchResult.Results)
             {
@@ -144,7 +143,7 @@ namespace TestWeb.ServiceInterface
                 Adds = features,
                 Token = hostedServiceCacheItem.Token
             };
-            var resultAdd = await new ArcGISGateway(hostedServiceCacheItem.Url, _serializer).ApplyEdits(adds);
+            var resultAdd = await new PortalGateway(hostedServiceCacheItem.Url, _serializer).ApplyEdits(adds);
 
             return new HttpResult(200);
         }
@@ -156,7 +155,7 @@ namespace TestWeb.ServiceInterface
 
             if (hostedServiceCacheItem == null) return new HttpException(500, "Invalid cache");
 
-            var gateway = new ArcGISGateway(hostedServiceCacheItem.Url, _serializer);
+            var gateway = new PortalGateway(hostedServiceCacheItem.Url, _serializer);
 
             var endpoint = (hostedServiceCacheItem.Url.TrimEnd('/') + "/0").AsEndpoint();
             var queryIds = new QueryForIds(endpoint) { Token = hostedServiceCacheItem.Token };
